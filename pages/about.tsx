@@ -1,4 +1,3 @@
-import React from 'react';
 import type { ReactElement } from 'react';
 import Head from 'next/head';
 import { Row, Text } from '@nextui-org/react';
@@ -17,13 +16,13 @@ const Page: NextPageWithLayout = () => {
 
 Page.getLayout = function getLayout(page: ReactElement) {
   return (
-    <React.Fragment>
+    <>
       <Head>
-        <title>About</title>
+        <title>About - Kaye Valerie</title>
       </Head>
 
       <Layout>{page}</Layout>
-    </React.Fragment>
+    </>
   );
 };
 

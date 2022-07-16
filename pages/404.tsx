@@ -7,17 +7,9 @@ import type { NextPageWithLayout } from './_app';
 const Page: NextPageWithLayout = () => {
   return (
     <Row justify="center">
-      <Link href="mailto:contact@kayevalerie.dev">
-        <Text
-          h6
-          size="1.8rem"
-          color="$yellow200"
-          css={{
-            backgroundColor: '$textBackground',
-            padding: '0.8rem'
-          }}
-        >
-          Get in touch with me: contact@kayevalerie.dev
+      <Link href="/">
+        <Text h6 size="2rem">
+          Page not found. Go back home
         </Text>
       </Link>
     </Row>
@@ -28,11 +20,12 @@ Page.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
-        <title>Home - Kaye Valerie</title>
+        <title>Page Not Found - Kaye Valerie</title>
       </Head>
 
       <Layout>{page}</Layout>
     </>
   );
 };
+
 export default Page;
