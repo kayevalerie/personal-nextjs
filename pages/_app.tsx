@@ -2,10 +2,10 @@ import '../styles/globals.css';
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import { createTheme, NextUIProvider, Switch } from '@nextui-org/react';
+import { createTheme, NextUIProvider } from '@nextui-org/react';
 import useDarkMode from 'use-dark-mode';
 
-const myLightTheme = createTheme({
+const lightTheme = createTheme({
   type: 'light',
   theme: {
     colors: {
@@ -40,7 +40,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
-    <NextUIProvider theme={darkMode.value ? darkTheme : myLightTheme}>
+    <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
       {getLayout(<Component {...pageProps} />)}
     </NextUIProvider>
   );

@@ -1,8 +1,11 @@
 import { Grid, Spacer } from '@nextui-org/react';
+import { useMediaQuery } from '../utils/useMediaQuery';
 import Header from './Header';
 import Footer from './Footer';
 
 export default function Layout({ children }) {
+  const isMd = useMediaQuery(768);
+
   return (
     <Grid.Container
       direction="column"
@@ -12,7 +15,7 @@ export default function Layout({ children }) {
       }}
     >
       <Grid>
-        <Spacer y={14} />
+        <Spacer y={isMd ? 7 : 14} />
         <Header />
       </Grid>
       <Grid>

@@ -8,7 +8,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "prettier-format": "prettier --config .prettierrc '**/*.tsx' --write"
+    "prettier-format": "prettier --config .prettierrc '**/*.tsx' 'components/*.js' --write"
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.9",
